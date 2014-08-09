@@ -36,4 +36,5 @@ public class HoloManager extends JavaPlugin {
             .withText(ChatColor.AQUA + "Check out the Developers Blog - www.mc-sq.net/developersblog.html")
             .withText(ChatColor.GRAY + "====================")
             .build();
+
 }

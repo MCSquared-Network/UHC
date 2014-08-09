@@ -2,7 +2,7 @@ package me.jjtcool.uhc.lobby;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ${JJtCool}
+ * User: JJtCool
  * Date: 08/08/14
  * Time: 12:17
  * To change this template use File | Settings | File Templates.

@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ${JJtCool}
+ * User: JJtCool
  * Date: 08/08/14
  * Time: 12:16
  * To change this template use File | Settings | File Templates.

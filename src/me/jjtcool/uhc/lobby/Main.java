@@ -12,7 +12,8 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class Main extends JavaPlugin implements Listener {
 
-    public void onEnable() {
+    //Work to be done
 
-    }
+
+
 }
