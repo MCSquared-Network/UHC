@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamers.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/HoloManager.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/HoloManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Main.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="UHCLobby.iws" />
@@ -26,7 +20,7 @@
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/Logic.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407498845449" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407500480482" ignored="false" />
     <file path="/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407500480482" ignored="false" />
-    <file path="/Dummy.txt" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407578189585" ignored="false" />
+    <file path="/Dummy.txt" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407578700007" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/formatTime.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407502577340" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/HealthListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407506845640" ignored="false" />
     <file path="/HealthListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407506838144" ignored="false" />
@@ -404,7 +398,11 @@
       <created>1407578192119</created>
       <updated>1407578192119</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial commit - UHC Lobby">
+      <created>1407578712796</created>
+      <updated>1407578712796</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -475,7 +473,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit - UHC Lobby" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -490,6 +488,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Initial commit" />
+    <MESSAGE value="Initial commit - UHC Lobby" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
