@@ -68,51 +68,33 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
         new BukkitRunnable() {
             public void run() {
-                try {
-                    board = Bukkit.getServer().getScoreboardManager().getNewScoreboard();
-                    final Objective obj = board.registerNewObjective("Kills", "dummy");
-                    for (Player player : Bukkit.getOnlinePlayers()) {
-                        final Scroller scroller = new Scroller("&lWelcome To The MCSquared Network!", 12, 8, '&');
-                        String next = scroller.next();
-                        obj.setDisplayName(next);
-
-                        Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.RED + "" + Bukkit.getOnlinePlayers().length));
-                    }
-                } catch (Exception e) {
-                    this.cancel();
-                }
-            }
-        }.runTaskTimer(this, 0L, 5L);
-
-        new BukkitRunnable() {
-            public void run() {
 
                 switch (state) {
 
                     case B1:
                         broadcast(ChatColor.AQUA + "" + ChatColor.BOLD + "Welcome to the "
                                 + ChatColor.GREEN + "" + ChatColor.BOLD + "MCSquared" + ChatColor.GRAY + " - "
-                                + ChatColor.YELLOW + "Visit mc-sq.net", 0f);
+                                + ChatColor.YELLOW + "Visit mc-sq.net", 100f);
                         state = me.jjtcool.uhc.lobby.state.gamestate.B2;
                         break;
                     case B2:
-                        broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "Check out our website - http://www.mc-sq.net", 20f);
+                        broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "Check out our website - http://www.mc-sq.net", 80f);
                         state = me.jjtcool.uhc.lobby.state.gamestate.B3;
                         break;
                     case B3:
-                        broadcast(ChatColor.YELLOW + "" + ChatColor.BOLD + "Donate to gain ingame perks & help the server", 40f);
+                        broadcast(ChatColor.YELLOW + "" + ChatColor.BOLD + "Donate to gain ingame perks & help the server", 60f);
                         state = me.jjtcool.uhc.lobby.state.gamestate.B4;
                         break;
                     case B4:
-                        broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "/hub" + ChatColor.AQUA + " To return to the Lobby!", 60f);
+                        broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "/hub" + ChatColor.AQUA + " To return to the Lobby!", 40f);
                         state = me.jjtcool.uhc.lobby.state.gamestate.B5;
                         break;
                     case B5:
-                        broadcast(ChatColor.YELLOW + "Check for the latest updates on our " + ChatColor.BOLD + "" + ChatColor.AQUA + "website!", 80f);
+                        broadcast(ChatColor.YELLOW + "Check for the latest updates on our " + ChatColor.BOLD + "" + ChatColor.AQUA + "website!", 20f);
                         state = me.jjtcool.uhc.lobby.state.gamestate.B6;
                         break;
                     case B6:
-                        broadcast(ChatColor.YELLOW + "Ranks, Squares and more at: " + ChatColor.BOLD + "" + ChatColor.AQUA + "http://store.mc-sq.net", 100f);
+                        broadcast(ChatColor.YELLOW + "Ranks, Squares and more at: " + ChatColor.BOLD + "" + ChatColor.AQUA + "http://store.mc-sq.net", 0f);
                         state = me.jjtcool.uhc.lobby.state.gamestate.B1;
                         break;
                     //Incorporate function of retrieving string for BossBar from Database - Allows for quick updates in lobbies
@@ -145,6 +127,8 @@ public class JoinEvent extends JavaPlugin implements Listener {
         final Score score3 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.YELLOW +  "§lWebsite: "));
 
         final Score scoreWebsite = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.WHITE + "www.mc-sq.net"));
+
+        final Scroller scroller = new Scroller("&lWelcome To The MCSquared Network!", 12, 8, '&');
 
         players = board.registerNewTeam("players");
         supporter = board.registerNewTeam("supporter");
@@ -183,6 +167,20 @@ public class JoinEvent extends JavaPlugin implements Listener {
         score3.setScore(2);
 
         scoreWebsite.setScore(1);
+        new BukkitRunnable() {
+            public void run() {
+                try {
+                    for (Player player : Bukkit.getOnlinePlayers()) {
+                        String next = scroller.next();
+                        obj.setDisplayName(next);
+                        player.setScoreboard(board);
+                        Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.RED + "" + Bukkit.getOnlinePlayers().length + ChatColor.AQUA + " Players"));
+                    }
+                } catch (Exception e) {
+                    this.cancel();
+                }
+            }
+        }.runTaskTimer(this, 0L, 5L);
 
     }
 
@@ -216,61 +214,20 @@ public class JoinEvent extends JavaPlugin implements Listener {
         String playerName = event.getPlayer().getName();
         Gamer gamer = Gamers.getGamer(player);
         String uuid = player.getUniqueId().toString();
-        String prefix = new String(ChatColor.RED + "" +  ChatColor.BOLD + "Owner " + ChatColor.WHITE);
-        NametagAPI.setPrefix(playerName, prefix);
         HolographicDisplaysAPI.createIndividualHologram(this,
                 HoloPoint,
                 player,
-                ChatColor.BOLD + "" + ChatColor.GREEN + "§l§aWelcome to the MCSquared Network", player.getName(), ChatColor.BOLD + "" + ChatColor.RED + "Server: §lUHC", ChatColor.AQUA + "Join a game by clicking a sign ahead!", ChatColor.YELLOW + "This is the pre-release for the MCSquared Network",
+                ChatColor.BOLD + "" + ChatColor.GREEN + "§l§aWelcome to the MCSquared Network", ChatColor.BOLD + "" + ChatColor.RED + "Server: §lUHC", ChatColor.AQUA + "Join a game by clicking a sign ahead!", ChatColor.YELLOW + "This is the pre-release for the MCSquared Network",
                 ChatColor.YELLOW + "We are working hard to get everything ready!", ChatColor.LIGHT_PURPLE + "Check out our website - " + ChatColor.GOLD + "www.mc-sq.net");
 
         HolographicDisplaysAPI.createIndividualHologram(this, HoloPoint2, player,
-                "§a§l" + player.getName() + " Statistics:", "§b§lKills: 0 ", "§b§lGames Won: 0", "§6Visit our website for more statistics!", "§d§lwww.mc-sq.net");
+                "§a§l" + player.getName() + " Statistics:", "§b§lKills: 0 ", "§b§lDeaths: 0 ", "§b§lGames Won: 0", "§6Visit our website for more statistics!", "§d§lwww.mc-sq.net");
         HolographicDisplaysAPI.createIndividualHologram(this, HoloPoint3, player,
-                "§a§l" + player.getName() + " Statistics:", "§b§lKills: 0 ", "§b§lGames Won: 0", "§6Visit our website for more statistics!", "§d§lwww.mc-sq.net");
+                "§a§l" + player.getName() + " Statistics:", "§b§lKills: 0 ", "§b§lDeaths: 0 ", "§b§lGames Won: 0", "§6Visit our website for more statistics!", "§d§lwww.mc-sq.net");
 
+        if (player.hasPermission("mcsq.player")) {
+        }
 
-        /**
-    if(player.hasPermission("mcsq.donator.supporter")){
-        String prefix = new String(ChatColor.BOLD + "" + ChatColor.BLUE + "Supporter ");
-        NametagAPI.setPrefix(playerName, prefix);
-        supporter.addPlayer(player);
-    }
-    if(player.hasPermission("mcsq.donator.captain")){
-        String prefix = new String(ChatColor.BOLD + "" + ChatColor.GREEN + "Captain ");
-        NametagAPI.setPrefix(playerName, prefix);
-        captain.addPlayer(player);
-    }
-    if(player.hasPermission("mcsq.donator.ultra")){
-        String prefix = new String(ChatColor.BOLD + "" + ChatColor.AQUA + "Ultra ");
-        NametagAPI.setPrefix(playerName, prefix);
-        ultra.addPlayer(player);
-    }
-    if(player.hasPermission("mcsq.donator.hero")){
-        String prefix = new String(ChatColor.BOLD + "" + ChatColor.LIGHT_PURPLE + "Hero ");
-        NametagAPI.setPrefix(playerName, prefix);
-        hero.addPlayer(player);
-    }
-    if (player.hasPermission("mcsq.staff.mod")){
-        String prefix = new String(ChatColor.BOLD + "" + ChatColor.DARK_PURPLE + "Mod ");
-        NametagAPI.setPrefix(playerName, prefix);
-        mod.addPlayer(player);
-    }
-    if(player.hasPermission("mcsq.staff.admin")){
-        String prefix = new String(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Admin ");
-        NametagAPI.setPrefix(playerName, prefix);
-        admin.addPlayer(player);
-    }
-    if(player.hasPermission("mcsq.staff.manager")){
-        String prefix = new String(ChatColor.BOLD + "" + ChatColor.DARK_AQUA + "Manager ");
-        NametagAPI.setPrefix(playerName, prefix);
-        manager.addPlayer(player);
-    }
-    if(player.hasPermission("mcsq.staff.owner")){
-        String prefix = new String(ChatColor.BOLD + "" + ChatColor.RED + "Owner ");
-        NametagAPI.setPrefix(playerName, prefix);
-        owner.addPlayer(player);
-    } **/
 
         ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
         BookMeta bm = (BookMeta) book.getItemMeta();
@@ -286,4 +243,3 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
 
 }
-

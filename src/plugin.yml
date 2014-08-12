@@ -4,3 +4,22 @@ version: 1.0.1
 description: >
              A UHC plugin for the MCSquared Network
 commands:
+     updatenametag:
+         description: Updates all players nametags!
+permissions:
+    mcsq.donator.supporter:
+        description: Supporter
+    mcsq.donator.captain:
+        description: Captain
+    mcsq.donator.ultra:
+        description: Ultra
+    mcsq.donator.hero:
+        description: Hero
+    mcsq.staff.mod:
+        description: Mod
+    mcsq.staff.admin:
+        description: Admin
+    mcsq.staff.operator:
+        description: Operator
+    mcsq.staff.owner:
+        description: Owner
