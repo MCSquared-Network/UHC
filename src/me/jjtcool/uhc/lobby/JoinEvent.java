@@ -18,6 +18,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scoreboard.*;
@@ -36,15 +37,6 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
     public World world;
 
-    public static Objective obj = board.registerNewObjective("Kills", "dummy");
-
-
-    public static Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "" + Bukkit.getOnlinePlayers() + " Players Online"));
-
-    public int squares;
-
-    public String rank;
-
     private static Team players;
 
     private static Team supporter;
@@ -62,6 +54,11 @@ public class JoinEvent extends JavaPlugin implements Listener {
     private static Team manager;
 
     private static Team owner;
+
+    public void onEnable() {
+        PluginManager manager = getServer().getPluginManager();
+        manager.registerEvents(this, this);
+    }
 
     public static com.dsh105.holoapi.api.HoloManager getHoloManager() {
         return com.dsh105.holoapi.HoloAPI.getManager();
@@ -85,7 +82,6 @@ public class JoinEvent extends JavaPlugin implements Listener {
             .withText(ChatColor.GRAY + "====================")
             .build();
 
-
     public void createScoreboard(final Player player) {
         board = Bukkit.getServer().getScoreboardManager().getNewScoreboard();
         final Objective obj = board.registerNewObjective("Kills", "dummy");
@@ -101,6 +97,8 @@ public class JoinEvent extends JavaPlugin implements Listener {
         final Score scoreRank = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "" + Gamers.getGamer(player).getRank()));
 
         final Score score3 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.BOLD + "" + ChatColor.AQUA + "Online: "));
+
+        final Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "" + Bukkit.getOnlinePlayers() + " Players Online"));
 
         final Score score4 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.BOLD + "" + ChatColor.GREEN + "Server: "));
 
@@ -119,7 +117,7 @@ public class JoinEvent extends JavaPlugin implements Listener {
                         String next = scroller.next();
                         obj.setDisplayName(next);
                         player.setScoreboard(board);
-                        scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "" + Bukkit.getOnlinePlayers() + "Players Online"));
+                        Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "" + Bukkit.getOnlinePlayers() + "Players Online"));
                     }
                 } catch (Exception e) {
                     this.cancel();
@@ -183,8 +181,6 @@ public class JoinEvent extends JavaPlugin implements Listener {
         String playerName = event.getPlayer().getName();
         Gamer gamer = Gamers.getGamer(player);
         String uuid = player.getUniqueId().toString();
-        rank = gamer.getRank();
-        squares = gamer.getSquares();
         if(player.hasPermission("mcsq.donator.supporter")){
             String prefix = new String(ChatColor.BOLD + "" + ChatColor.BLUE + "Supporter ");
             NametagAPI.setPrefix(playerName, prefix);

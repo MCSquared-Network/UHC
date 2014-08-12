@@ -1,6 +1,6 @@
 name: UHC
-main: me.JJtCool.uhc.lobby.JoinEvent
-version: 1.0.0
+main: me.jjtcool.uhc.lobby.JoinEvent
+version: 1.0.1
 description: >
              A UHC plugin for the MCSquared Network
 commands:

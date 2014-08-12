@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="UHCLobby:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin.yml" />
-      <change type="DELETED" beforePath="C:\Users\Richard\IdeaProjects\UHC\src\me\jjtcool\uhc\lobby\Main.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="$PROJECT_DIR$/src/plugin.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="UHCLobby.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407782849258" ignored="false" />
-    <file path="/JoinEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407788668162" ignored="false" />
+    <file path="/JoinEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407831604246" ignored="false" />
     <file path="$PROJECT_DIR$/../VertigoPvP/src/me/jjtcool/vertigopvp/Gamer.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407496736895" ignored="false" />
     <file path="/HoloManager.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407498302790" ignored="false" />
     <file path="/HoloAPI.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407497580251" ignored="false" />
@@ -22,13 +27,13 @@
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/Logic.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407498845449" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407500480482" ignored="false" />
     <file path="/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407782864341" ignored="false" />
-    <file path="/Dummy.txt" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407788743441" ignored="false" />
+    <file path="/Dummy.txt" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407829563133" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/formatTime.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407502577340" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/HealthListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407506845640" ignored="false" />
     <file path="/HealthListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407695123288" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/DeathEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407509355492" ignored="false" />
-    <file path="/DeathEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407697018915" ignored="false" />
-    <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/DeathEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407697056656" ignored="false" />
+    <file path="/DeathEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407789857218" ignored="false" />
+    <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/DeathEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407789871037" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/WorldBorderListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407697108873" ignored="false" />
     <file path="/WorldBorderListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407693241472" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/Main.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407783272418" ignored="false" />
@@ -39,15 +44,15 @@
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407782864825" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/HealthListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407695123288" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/JoinEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407784372766" ignored="false" />
-    <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/ScatterPlayers.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407698876211" ignored="false" />
-    <file path="/ScatterPlayers.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407698846781" ignored="false" />
+    <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/ScatterPlayers.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407790033437" ignored="false" />
+    <file path="/ScatterPlayers.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407790025236" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/PreGameFallDamage.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407699138054" ignored="false" />
     <file path="/PreGameFallDamage.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407699079843" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/PreGameFreezePlayers.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407699713432" ignored="false" />
     <file path="/PreGameFreezePlayers.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407699580234" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/PreGame.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407784372766" ignored="false" />
     <file path="/PreGame.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407783452983" ignored="false" />
-    <file path="/plugin.yml" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407788825237" ignored="false" />
+    <file path="/plugin.yml" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407829575231" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +67,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -98,7 +104,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -111,7 +116,7 @@
       <file leaf-file-name="JoinEvent.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="191" column="56" selection-start="7429" selection-end="7429" vertical-scroll-proportion="0.44327486">
+            <state line="175" column="68" selection-start="6800" selection-end="6800" vertical-scroll-proportion="0.35253456">
               <folding />
             </state>
           </provider>
@@ -120,7 +125,7 @@
       <file leaf-file-name="plugin.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="9" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
+            <state line="5" column="64" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -177,8 +182,8 @@
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Main.java" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/HoloManager.java" />
-        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" />
       </list>
     </option>
   </component>
@@ -219,8 +224,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -277,24 +280,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/plugin.yml" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -314,19 +319,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -354,6 +346,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -444,12 +449,16 @@
       <created>1407788750106</created>
       <updated>1407788750106</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Removed Main Class, added plugin.yml">
+      <created>1407788843484</created>
+      <updated>1407788843484</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -459,12 +468,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3232662" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18869048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13154761" sideWeight="0.6767338" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -515,7 +524,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added teleport spawn function on join event, also edited Hologram positioning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Main Class, added plugin.yml" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -533,11 +542,30 @@
     <MESSAGE value="Initial commit - UHC Lobby" />
     <MESSAGE value="Second commit - UHC Lobby" />
     <MESSAGE value="Added teleport spawn function on join event, also edited Hologram positioning" />
+    <MESSAGE value="Removed Main Class, added plugin.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="1" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="16" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
@@ -601,6 +629,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="64" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="52" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.0">
@@ -624,14 +659,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="56" selection-start="7429" selection-end="7429" vertical-scroll-proportion="0.44327486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
+        <state line="175" column="68" selection-start="6800" selection-end="6800" vertical-scroll-proportion="0.35253456">
           <folding />
         </state>
       </provider>
@@ -642,10 +670,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>UHCLobby:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
