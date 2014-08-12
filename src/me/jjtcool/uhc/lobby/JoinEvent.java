@@ -65,6 +65,25 @@ public class JoinEvent extends JavaPlugin implements Listener {
         manager.registerEvents(this, this);
 
         state = me.jjtcool.uhc.lobby.state.gamestate.B1;
+
+        new BukkitRunnable() {
+            public void run() {
+                try {
+                    board = Bukkit.getServer().getScoreboardManager().getNewScoreboard();
+                    final Objective obj = board.registerNewObjective("Kills", "dummy");
+                    for (Player player : Bukkit.getOnlinePlayers()) {
+                        final Scroller scroller = new Scroller("&lWelcome To The MCSquared Network!", 12, 8, '&');
+                        String next = scroller.next();
+                        obj.setDisplayName(next);
+
+                        Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.RED + "" + Bukkit.getOnlinePlayers().length));
+                    }
+                } catch (Exception e) {
+                    this.cancel();
+                }
+            }
+        }.runTaskTimer(this, 0L, 5L);
+
         new BukkitRunnable() {
             public void run() {
 
@@ -115,9 +134,9 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 
-        final Score score1 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "§lOnline: "));
+        final Score score1 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "§lOnline:"));
 
-        final Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.RED + "" + Bukkit.getOnlinePlayers().length + ChatColor.AQUA + " Players"));
+        final Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.RED + "" + Bukkit.getOnlinePlayers().length));
 
         final Score score2 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "§lServer: "));
 
@@ -126,23 +145,6 @@ public class JoinEvent extends JavaPlugin implements Listener {
         final Score score3 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.YELLOW +  "§lWebsite: "));
 
         final Score scoreWebsite = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.WHITE + "www.mc-sq.net"));
-
-        final Scroller scroller = new Scroller("&lWelcome " + player.getName() + " To The MCSquared Network!", 12, 8, '&');
-
-        new BukkitRunnable() {
-            public void run() {
-                try {
-                    for (Player player : Bukkit.getOnlinePlayers()) {
-                        String next = scroller.next();
-                        obj.setDisplayName(next);
-                         player.setScoreboard(board);
-                        Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.RED + "" + Bukkit.getOnlinePlayers().length + ChatColor.AQUA + " Players"));
-                    }
-                } catch (Exception e) {
-                    this.cancel();
-                }
-            }
-        }.runTaskTimer(this, 0L, 5L);
 
         players = board.registerNewTeam("players");
         supporter = board.registerNewTeam("supporter");
@@ -186,7 +188,7 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
-        event.setQuitMessage(ChatColor.WHITE + "[" + ChatColor.RED + "UHC" + ChatColor.WHITE + "] " + ChatColor.RED + players.getName() + " left");
+        event.setQuitMessage(ChatColor.WHITE + "[" + ChatColor.RED + "UHC" + ChatColor.WHITE + "] " + ChatColor.RED + event.getPlayer().getName() + " left");
         event.getPlayer().getInventory().clear();
         event.getPlayer().updateInventory();
     }

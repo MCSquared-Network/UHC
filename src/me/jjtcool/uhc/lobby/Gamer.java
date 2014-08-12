@@ -36,7 +36,13 @@ public class Gamer {
 
     public String username;
 
+    public String playerScroller;
+
     public Gamer() {
+    }
+
+    public String getPlayerScroller() {
+        return playerScroller;
     }
 
     public String getUsername() {
