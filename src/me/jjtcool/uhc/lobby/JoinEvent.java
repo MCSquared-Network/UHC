@@ -18,7 +18,11 @@ import org.bukkit.craftbukkit.v1_7_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
+import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
@@ -27,6 +31,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scoreboard.*;
 import org.bukkit.util.Vector;
+
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -60,11 +68,29 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
     public state.gamestate state;
 
+    private List<Runnable> scrollers = new ArrayList<Runnable>();
+
     public void onEnable() {
+        MySQL.openConnection();
+        Bukkit.getConsoleSender().sendMessage("opening db connection " + MySQL.connection);
         PluginManager manager = getServer().getPluginManager();
         manager.registerEvents(this, this);
 
+        getCommand("setmynametag").setExecutor(new UpdateNameTagCommand());
+
         state = me.jjtcool.uhc.lobby.state.gamestate.B1;
+
+        new BukkitRunnable() {
+            public void run() {
+                try {
+                    for (Runnable scroller :scrollers) {
+                        scroller.run();
+                    }
+                } catch (Exception e) {
+                    this.cancel();
+                }
+            }
+        }.runTaskTimer(this, 0L, 5L);
 
         new BukkitRunnable() {
             public void run() {
@@ -101,7 +127,37 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
                 }
             }
-        }.runTaskTimerAsynchronously(this, 240L, 240L);      //FIX
+        }.runTaskTimer(this, 240L, 240L);      //FIX
+    }
+
+    @EventHandler
+    public void playerLosesHunger(FoodLevelChangeEvent event) {
+        if (event.getEntity() instanceof Player) {
+            event.setCancelled(true);
+        }
+    }
+    @EventHandler
+    public void playerLosesHealth(EntityDamageEvent event) {
+        event.setCancelled(true);
+    }
+    @EventHandler
+    public void pickUpItem(PlayerDropItemEvent event) {
+        if (!event.getPlayer().hasPermission("mcsq.staff")) {
+                event.setCancelled(true);
+        }
+    }
+    @EventHandler
+    public void pickUpItem(PlayerPickupItemEvent event) {
+        if (!event.getPlayer().hasPermission("mcsq.staff")) {
+            event.setCancelled(true);
+        }
+    }
+
+
+    @Override
+    public void onDisable() {
+        super.onDisable();
+        MySQL.closeConnection();
     }
 
     public void broadcast(String message, float percent) {
@@ -110,7 +166,7 @@ public class JoinEvent extends JavaPlugin implements Listener {
         }
     }
 
-    public void createScoreboard(Player player) {
+    public void createScoreboard(final Player player) {
         board = Bukkit.getServer().getScoreboardManager().getNewScoreboard();
         final Objective obj = board.registerNewObjective("Kills", "dummy");
 
@@ -128,7 +184,7 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
         final Score scoreWebsite = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.WHITE + "www.mc-sq.net"));
 
-        final Scroller scroller = new Scroller("&lWelcome To The MCSquared Network!", 12, 8, '&');
+        final Scroller scroller =  new Scroller("&lWelcome " + player.getName() + " To The MCSquared Network!", 12, 8, '&');
 
         players = board.registerNewTeam("players");
         supporter = board.registerNewTeam("supporter");
@@ -167,26 +223,25 @@ public class JoinEvent extends JavaPlugin implements Listener {
         score3.setScore(2);
 
         scoreWebsite.setScore(1);
-        new BukkitRunnable() {
+
+        scrollers.add(new Runnable() {
+            @Override
             public void run() {
                 try {
-                    for (Player player : Bukkit.getOnlinePlayers()) {
                         String next = scroller.next();
                         obj.setDisplayName(next);
                         player.setScoreboard(board);
-                        Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.RED + "" + Bukkit.getOnlinePlayers().length + ChatColor.AQUA + " Players"));
-                    }
+
                 } catch (Exception e) {
-                    this.cancel();
                 }
             }
-        }.runTaskTimer(this, 0L, 5L);
-
+        });
     }
 
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
         event.setQuitMessage(ChatColor.WHITE + "[" + ChatColor.RED + "UHC" + ChatColor.WHITE + "] " + ChatColor.RED + event.getPlayer().getName() + " left");
+        MySQL.setPlayerOffline(event.getPlayer());
         event.getPlayer().getInventory().clear();
         event.getPlayer().updateInventory();
     }
@@ -194,7 +249,31 @@ public class JoinEvent extends JavaPlugin implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        event.getPlayer().getInventory().clear();
+        event.getPlayer().updateInventory();
         createScoreboard(player);
+        MySQL.setPlayerOnline(player);
+        updatePlayerNametag.updateNametag(player);
+
+
+        if (!MySQL.playerDataContainsPLayer(event.getPlayer())) {
+            try {
+                PreparedStatement newPlayer = MySQL.connection.prepareStatement("INSERT INTO `playerUHCData` values(?,?,?,?,?,?);");
+                newPlayer.setString(1, event.getPlayer().getUniqueId().toString());
+                newPlayer.setInt(2, 0);
+                newPlayer.setInt(3, 0);
+                newPlayer.setInt(4, 0);
+                newPlayer.setString(5, event.getPlayer().getName());
+                newPlayer.setInt(6, 0);
+                newPlayer.execute();
+                newPlayer.close();
+
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+
+        }
+
         Location spawn = new Location(Bukkit.getWorld("uhclobby"), 34.5, 39, -187.5);
         player.teleport(spawn);
 
@@ -221,9 +300,9 @@ public class JoinEvent extends JavaPlugin implements Listener {
                 ChatColor.YELLOW + "We are working hard to get everything ready!", ChatColor.LIGHT_PURPLE + "Check out our website - " + ChatColor.GOLD + "www.mc-sq.net");
 
         HolographicDisplaysAPI.createIndividualHologram(this, HoloPoint2, player,
-                "§a§l" + player.getName() + " Statistics:", "§b§lKills: 0 ", "§b§lDeaths: 0 ", "§b§lGames Won: 0", "§6Visit our website for more statistics!", "§d§lwww.mc-sq.net");
+                "§a§l" + player.getName() + " Statistics:", "§b§lKills: " + MySQL.getPlayerKills(player), "§b§lDeaths: " + MySQL.getPlayerDeaths(player), "§b§lGames Won: " + MySQL.getPlayerGamesWon(player), "§6Visit our website for more statistics!", "§d§lwww.mc-sq.net");
         HolographicDisplaysAPI.createIndividualHologram(this, HoloPoint3, player,
-                "§a§l" + player.getName() + " Statistics:", "§b§lKills: 0 ", "§b§lDeaths: 0 ", "§b§lGames Won: 0", "§6Visit our website for more statistics!", "§d§lwww.mc-sq.net");
+                "§a§l" + player.getName() + " Statistics:", "§b§lKills: " + MySQL.getPlayerKills(player), "§b§lDeaths: " + MySQL.getPlayerDeaths(player), "§b§lGames Won: " + MySQL.getPlayerGamesWon(player), "§6Visit our website for more statistics!", "§d§lwww.mc-sq.net");
 
         if (player.hasPermission("mcsq.player")) {
         }

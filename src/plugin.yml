@@ -1,12 +1,14 @@
 name: UHC
 main: me.jjtcool.uhc.lobby.JoinEvent
-version: 1.0.1
+version: 1.0.8
 description: >
              A UHC plugin for the MCSquared Network
 commands:
-     updatenametag:
-         description: Updates all players nametags!
+     setmynametag:
+         description: Sets your nametag!
 permissions:
+    mcsq.changenametag:
+        description: Can change nametag
     mcsq.donator.supporter:
         description: Supporter
     mcsq.donator.captain:
