@@ -24,6 +24,7 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.server.ServerListPingEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
 import org.bukkit.plugin.PluginManager;
@@ -34,7 +35,9 @@ import org.bukkit.util.Vector;
 
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -76,6 +79,7 @@ public class JoinEvent extends JavaPlugin implements Listener {
         PluginManager manager = getServer().getPluginManager();
         manager.registerEvents(this, this);
 
+
         getCommand("setmynametag").setExecutor(new UpdateNameTagCommand());
 
         state = me.jjtcool.uhc.lobby.state.gamestate.B1;
@@ -91,43 +95,62 @@ public class JoinEvent extends JavaPlugin implements Listener {
                 }
             }
         }.runTaskTimer(this, 0L, 5L);
+    }
 
-        new BukkitRunnable() {
+    public void showBarChanging(final Player player) {
+        getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
+            @Override
             public void run() {
+         switch (state) {
 
-                switch (state) {
-
-                    case B1:
-                        broadcast(ChatColor.AQUA + "" + ChatColor.BOLD + "Welcome to the "
-                                + ChatColor.GREEN + "" + ChatColor.BOLD + "MCSquared" + ChatColor.GRAY + " - "
-                                + ChatColor.YELLOW + "Visit mc-sq.net", 100f);
-                        state = me.jjtcool.uhc.lobby.state.gamestate.B2;
-                        break;
-                    case B2:
-                        broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "Check out our website - http://www.mc-sq.net", 80f);
-                        state = me.jjtcool.uhc.lobby.state.gamestate.B3;
-                        break;
-                    case B3:
-                        broadcast(ChatColor.YELLOW + "" + ChatColor.BOLD + "Donate to gain ingame perks & help the server", 60f);
-                        state = me.jjtcool.uhc.lobby.state.gamestate.B4;
-                        break;
-                    case B4:
-                        broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "/hub" + ChatColor.AQUA + " To return to the Lobby!", 40f);
-                        state = me.jjtcool.uhc.lobby.state.gamestate.B5;
-                        break;
-                    case B5:
-                        broadcast(ChatColor.YELLOW + "Check for the latest updates on our " + ChatColor.BOLD + "" + ChatColor.AQUA + "website!", 20f);
-                        state = me.jjtcool.uhc.lobby.state.gamestate.B6;
-                        break;
-                    case B6:
-                        broadcast(ChatColor.YELLOW + "Ranks, Squares and more at: " + ChatColor.BOLD + "" + ChatColor.AQUA + "http://store.mc-sq.net", 0f);
-                        state = me.jjtcool.uhc.lobby.state.gamestate.B1;
-                        break;
-                    //Incorporate function of retrieving string for BossBar from Database - Allows for quick updates in lobbies
-
-                }
+                            case B1:
+                                broadcast(ChatColor.AQUA + "" + ChatColor.BOLD + "Welcome " + ChatColor.YELLOW + "" + ChatColor.BOLD + player.getName() +
+                                        ChatColor.AQUA + "" + ChatColor.BOLD + " to the "
+                                        + ChatColor.GREEN + "" + ChatColor.BOLD + "MCSquared Network!", 100f);
+                                state = me.jjtcool.uhc.lobby.state.gamestate.B2;
+                                break;
+                            case B2:
+                                broadcast(ChatColor.AQUA + "" + ChatColor.BOLD + Bukkit.getOnlinePlayers().length + ChatColor.RED + "/" + ChatColor.AQUA + "" + ChatColor.BOLD + Bukkit.getMaxPlayers() + " Players Currently Online" , 80f);
+                                //ChatColor.GREEN + "" + ChatColor.BOLD + "Check out our website - http://www.mc-sq.net", 80f
+                                state = me.jjtcool.uhc.lobby.state.gamestate.B3;
+                                break;
+                            case B3:
+                                broadcast(ChatColor.BLUE + "" + ChatColor.BOLD + "Tip: " + ChatColor.GREEN + "" + ChatColor.BOLD + "Visit our website to view your stats!", 60f);
+                                state = me.jjtcool.uhc.lobby.state.gamestate.B4;
+                                break;
+                            case B4:
+                                broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "Updates: " + ChatColor.RED + "" + ChatColor.BOLD + "No Updates To Display", 60f);
+                                state = me.jjtcool.uhc.lobby.state.gamestate.B5;
+                                break;
+                            case B5:
+                                broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "§l/hub" + ChatColor.AQUA + " §lTo Return To The Lobby!", 40f);
+                                state = me.jjtcool.uhc.lobby.state.gamestate.B6;
+                                break;
+                            case B6:
+                                broadcast(ChatColor.YELLOW + "" + ChatColor.BOLD + "Check for the latest updates on our website!", 20f);
+                                state = me.jjtcool.uhc.lobby.state.gamestate.B7;
+                                break;
+                            case B7:
+                                broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "PLAY.MC-SQ.NET", 0f);
+                                state = me.jjtcool.uhc.lobby.state.gamestate.B1;
+                                break;
+                            //Incorporate function of retrieving string for BossBar from Database - Allows for quick updates in lobbies
             }
-        }.runTaskTimer(this, 240L, 240L);      //FIX
+          }
+        }, 100L, 100L);
+    }
+
+
+
+    @EventHandler
+    public void serverPingEvent(ServerListPingEvent event) {
+        Calendar calendar = Calendar.getInstance();
+        event.setMotd("§f[" + ChatColor.AQUA + "" + ChatColor.BOLD + Bukkit.getOnlinePlayers().length + ChatColor.RED +
+                "/" + ChatColor.AQUA + "" + ChatColor.BOLD + Bukkit.getMaxPlayers() + "§f]" + ChatColor.GREEN + "" + ChatColor.BOLD + " "
+                + Bukkit.getServer().getServerName() + " - " + ChatColor.RED + "" + ChatColor.BOLD + "Server Time: " + ChatColor.YELLOW + "" + ChatColor.BOLD
+                + calendar.get(calendar.HOUR_OF_DAY) + ":" + calendar.get(calendar.MINUTE) + ":" + calendar.get(calendar.SECOND)+
+                (calendar.get(calendar.AM_PM) == calendar.AM ? " AM" : " PM") +
+                "\n" + ChatColor.GREEN + "" + ChatColor.BOLD + "               MCSquared Network" );
     }
 
     @EventHandler
@@ -156,6 +179,9 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            MySQL.setPlayerOffline(player);
+        }
         super.onDisable();
         MySQL.closeConnection();
     }
@@ -172,15 +198,15 @@ public class JoinEvent extends JavaPlugin implements Listener {
 
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 
-        final Score score1 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "§lOnline:"));
+        final Score score1 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.AQUA + "" + ChatColor.BOLD + "§lOnline:"));
 
         final Score scoreOnline = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.RED + "" + Bukkit.getOnlinePlayers().length));
 
-        final Score score2 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "§lServer: "));
+        final Score score2 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "" + ChatColor.BOLD + "§lServer: "));
 
-        final Score scoreServer = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + "UHC"));
+        final Score scoreServer = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN + Bukkit.getServer().getServerName()));
 
-        final Score score3 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.YELLOW +  "§lWebsite: "));
+        final Score score3 = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.YELLOW + "" + ChatColor.BOLD +  "§lWebsite: "));
 
         final Score scoreWebsite = obj.getScore(Bukkit.getOfflinePlayer(ChatColor.WHITE + "www.mc-sq.net"));
 
@@ -249,6 +275,7 @@ public class JoinEvent extends JavaPlugin implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        showBarChanging(player);
         event.getPlayer().getInventory().clear();
         event.getPlayer().updateInventory();
         createScoreboard(player);
@@ -275,6 +302,7 @@ public class JoinEvent extends JavaPlugin implements Listener {
         }
 
         Location spawn = new Location(Bukkit.getWorld("uhclobby"), 34.5, 39, -187.5);
+        spawn.setYaw(3);
         player.teleport(spawn);
 
         if (!event.getPlayer().hasPlayedBefore()) {
