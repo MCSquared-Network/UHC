@@ -38,7 +38,17 @@ public class Gamer {
 
     public String playerScroller;
 
+    public String particleType;
+
     public Gamer() {
+    }
+
+    public String getParticleType() {
+        return particleType;
+    }
+
+    public void setParticleType(String particleType) {
+        this.particleType = particleType;
     }
 
     public String getPlayerScroller() {

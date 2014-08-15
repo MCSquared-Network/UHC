@@ -7,14 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ServerPing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" afterPath="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="UHCLobby.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407955717541" ignored="false" />
-    <file path="/JoinEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408012511748" ignored="false" />
+    <file path="/JoinEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408054001121" ignored="false" />
     <file path="$PROJECT_DIR$/../VertigoPvP/src/me/jjtcool/vertigopvp/Gamer.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407496736895" ignored="false" />
     <file path="/HoloManager.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407498302790" ignored="false" />
     <file path="/HoloAPI.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407497580251" ignored="false" />
@@ -26,8 +26,8 @@
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/JoinEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407506845640" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/Logic.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407498845449" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407500480482" ignored="false" />
-    <file path="/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407782864341" ignored="false" />
-    <file path="/Dummy.txt" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408004873574" ignored="false" />
+    <file path="/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408047762016" ignored="false" />
+    <file path="/Dummy.txt" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408107402408" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/formatTime.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407502577340" ignored="false" />
     <file path="$PROJECT_DIR$/../UHCGameplay/src/me/jjtcool/uhc/gameplay/HealthListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407506845640" ignored="false" />
     <file path="/HealthListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407956739349" ignored="false" />
@@ -38,7 +38,7 @@
     <file path="/WorldBorderListener.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407693241472" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/Main.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407965284842" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/Gamer.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407693226625" ignored="false" />
-    <file path="/Gamer.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407844598407" ignored="false" />
+    <file path="/Gamer.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408055671948" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/WorldBorderShrinker.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407695686548" ignored="false" />
     <file path="/WorldBorderShrinker.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407695674614" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407782864825" ignored="false" />
@@ -52,10 +52,10 @@
     <file path="/PreGameFreezePlayers.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407699580234" ignored="false" />
     <file path="$USER_HOME$/Desktop/UHCGameplay/src/me/jjtcool/uhc/gameplay/PreGame.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407965513695" ignored="false" />
     <file path="/PreGame.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407783452983" ignored="false" />
-    <file path="/plugin.yml" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407956823940" ignored="false" />
+    <file path="/plugin.yml" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408051645128" ignored="false" />
     <file path="/state.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407839919763" ignored="false" />
     <file path="$PROJECT_DIR$/../Lobby/src/me/jjtcool/lobby/Main.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407840006503" ignored="false" />
-    <file path="/MySQL.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408012623299" ignored="false" />
+    <file path="/MySQL.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408052032079" ignored="false" />
     <file path="/MySQLJoin.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407849834004" ignored="false" />
     <file path="/UpdateNameTagCommand.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407953114978" ignored="false" />
     <file path="$USER_HOME$/workspace/War/src/me/JJtCool/War/War.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1407856348526" ignored="false" />
@@ -73,6 +73,22 @@
     <file path="/EntityEffects.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408008362558" ignored="false" />
     <file path="/ServerPingEvent.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408009614849" ignored="false" />
     <file path="/ServerPing.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408010283576" ignored="false" />
+    <file path="$USER_HOME$/Desktop/StatusSign/src/me/jjtcool/statussign.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408025696267" ignored="false" />
+    <file path="$USER_HOME$/Desktop/StatusSign/src/me/jjtcool/statussign/StatusSigns.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408025956359" ignored="false" />
+    <file path="$USER_HOME$/Desktop/StatusSign/src/me/jjtcool/statussign/StatusSign.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408026503806" ignored="false" />
+    <file path="/StatusSigns.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408025943671" ignored="false" />
+    <file path="$USER_HOME$/Desktop/StatusSign/src/plugin.yml" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408026109106" ignored="false" />
+    <file path="/StatusSign.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408026491449" ignored="false" />
+    <file path="$USER_HOME$/Desktop/Announcer/src/me/jjtcool/announcer/Announcer.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408052869189" ignored="false" />
+    <file path="/Announcer.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408052851026" ignored="false" />
+    <file path="$USER_HOME$/Desktop/Announcer/src/me/jjtcool/announcer/gamestate.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408047897513" ignored="false" />
+    <file path="$USER_HOME$/Desktop/Announcer/src/me/jjtcool/announcer/MySQL.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408053435830" ignored="false" />
+    <file path="$USER_HOME$/Desktop/Announcer/src/me/jjtcool/announcer/commands.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408053697361" ignored="false" />
+    <file path="/commands.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408052630187" ignored="false" />
+    <file path="$USER_HOME$/Desktop/Announcer/src/plugin.yml" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408051653098" ignored="false" />
+    <file path="/ParticleTrails.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408055377707" ignored="false" />
+    <file path="/ParticleCommand.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408055699185" ignored="false" />
+    <file path="/ParticlePlayer.java" changelist="f15222d7-d092-4d3a-a6d0-d9c1f62cbae0" time="1408056458231" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,31 +149,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JoinEvent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="67" selection-start="11811" selection-end="11811" vertical-scroll-proportion="-16.48">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2103#2113#0" expanded="true" />
-                <element signature="e#2524#2836#0" expanded="true" />
-                <element signature="e#2825#2826#0" expanded="true" />
-                <element signature="e#2994#5812#0" expanded="true" />
-                <element signature="e#5801#5802#0" expanded="true" />
-                <element signature="e#10033#10366#0" expanded="true" />
-                <element signature="e#10355#10356#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ServerPing.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ServerPing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="18" column="13" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,34 +170,16 @@
       <file leaf-file-name="UpdateNameTagCommand.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/UpdateNameTagCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="96" selection-start="3093" selection-end="3093" vertical-scroll-proportion="0.0">
+            <state line="74" column="22" selection-start="582" selection-end="3808" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MySQL.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MySQL.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/MySQL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="66" selection-start="4144" selection-end="4145" vertical-scroll-proportion="0.19738752">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreparedStatement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.6.0_45/src.zip!/java/sql/PreparedStatement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="453" column="12" selection-start="22001" selection-end="22001" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreparedStatement.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/craftbukkit-1.7.9-R0.2.jar!/com/mysql/jdbc/PreparedStatement.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="19" selection-start="4260" selection-end="4260" vertical-scroll-proportion="0.0">
+            <state line="283" column="43" selection-start="8692" selection-end="8692" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -219,16 +197,16 @@
       <file leaf-file-name="plugin.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="44" selection-start="0" selection-end="687" vertical-scroll-proportion="0.0">
+            <state line="26" column="26" selection-start="0" selection-end="687" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scroller.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Scroller.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="45" selection-start="400" selection-end="401" vertical-scroll-proportion="0.0">
+            <state line="19" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.31336406">
               <folding />
             </state>
           </provider>
@@ -252,22 +230,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamers.java" />
-        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java" />
-        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Main.java" />
-        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/HoloManager.java" />
-        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/state.java" />
-        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/MySQLJoin.java" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scrollers.java" />
-        <option value="$PROJECT_DIR$/src/plugin.yml" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/updatePlayerNametag.java" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/UpdateNameTagCommand.java" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/EntityEffects.java" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ServerPingEvent.java" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ServerPing.java" />
-        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" />
+        <option value="$PROJECT_DIR$/src/plugin.yml" />
         <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/MySQL.java" />
+        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java" />
+        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ParticleTrails.java" />
+        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java" />
+        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ParticleCommand.java" />
+        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ReflectionHandler.java" />
+        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ParticlePlayer.java" />
+        <option value="$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ParticleEffect.java" />
       </list>
     </option>
   </component>
@@ -308,6 +286,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -364,7 +343,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -380,11 +358,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -404,6 +382,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -431,19 +422,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -563,12 +541,16 @@
       <created>1407955464614</created>
       <updated>1407955464614</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed bugs, improved DisplayBar.">
+      <created>1408025648067</created>
+      <updated>1408025648067</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -578,16 +560,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20022371" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20022371" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15" sideWeight="0.7997763" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1904762" sideWeight="0.7997763" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20022371" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -634,7 +616,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugged and fixed lots of errors. Changed updatenametag system." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs, improved DisplayBar." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -656,6 +638,7 @@
     <MESSAGE value="Edited NullPointer on Main" />
     <MESSAGE value="Holograms now unique per player, edited Scoreboard cosmetics." />
     <MESSAGE value="Debugged and fixed lots of errors. Changed updatenametag system." />
+    <MESSAGE value="Fixed bugs, improved DisplayBar." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -665,36 +648,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="208" column="84" selection-start="888" selection-end="7844" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2103#2113#0" expanded="true" />
-            <element signature="e#2524#2836#0" expanded="true" />
-            <element signature="e#2825#2826#0" expanded="true" />
-            <element signature="e#2994#5812#0" expanded="true" />
-            <element signature="e#5801#5802#0" expanded="true" />
-            <element signature="e#10033#10366#0" expanded="true" />
-            <element signature="e#10355#10356#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="59" selection-start="316" selection-end="1711" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="22" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
@@ -702,51 +655,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="44" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/craftbukkit-1.7.9-R0.2.jar!/com/mysql/jdbc/PreparedStatement.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="19" selection-start="4260" selection-end="4260" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="76" column="19" selection-start="4260" selection-end="4260" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_45/src.zip!/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="453" column="12" selection-start="22001" selection-end="22001" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="453" column="12" selection-start="22001" selection-end="22001" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/updatePlayerNametag.java">
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ServerPing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/UpdateNameTagCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="96" selection-start="3093" selection-end="3093" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="44" selection-start="0" selection-end="687" vertical-scroll-proportion="0.0">
+        <state line="18" column="13" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -758,41 +679,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/ServerPing.java">
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/updatePlayerNametag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="15" column="13" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java">
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="45" selection-start="400" selection-end="401" vertical-scroll-proportion="0.0">
+        <state line="26" column="26" selection-start="0" selection-end="687" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/MySQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="283" column="43" selection-start="8692" selection-end="8692" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/JoinEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="67" selection-start="11811" selection-end="11811" vertical-scroll-proportion="-16.48">
+        <state line="102" column="86" selection-start="3064" selection-end="3064" vertical-scroll-proportion="0.22900763">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2103#2113#0" expanded="true" />
-            <element signature="e#2524#2836#0" expanded="true" />
-            <element signature="e#2825#2826#0" expanded="true" />
-            <element signature="e#2994#5812#0" expanded="true" />
-            <element signature="e#5801#5802#0" expanded="true" />
-            <element signature="e#10033#10366#0" expanded="true" />
-            <element signature="e#10355#10356#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/MySQL.java">
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="66" selection-start="4144" selection-end="4145" vertical-scroll-proportion="0.19738752">
+        <state line="13" column="13" selection-start="259" selection-end="259" vertical-scroll-proportion="0.27994013">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Gamer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="39" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.58532935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/UpdateNameTagCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="22" selection-start="582" selection-end="3808" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/jjtcool/uhc/lobby/Scroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.31336406">
           <folding />
         </state>
       </provider>

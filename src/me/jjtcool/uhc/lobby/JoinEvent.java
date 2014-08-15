@@ -119,7 +119,7 @@ public class JoinEvent extends JavaPlugin implements Listener {
                                 state = me.jjtcool.uhc.lobby.state.gamestate.B4;
                                 break;
                             case B4:
-                                broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "Updates: " + ChatColor.RED + "" + ChatColor.BOLD + "No Updates To Display", 60f);
+                                broadcast(ChatColor.GREEN + "" + ChatColor.BOLD + "Updates: " + ChatColor.RED + "" + ChatColor.BOLD + MySQL.getLatestUpdate(), 50f);
                                 state = me.jjtcool.uhc.lobby.state.gamestate.B5;
                                 break;
                             case B5:
